@@ -80,32 +80,32 @@ const Page1 = (props) => {
                     </> : 
                     (refresh >= 50 && refresh < 60) ?
                         <figure className="w3-animate-zoom" >
-                            <img className="image-size" src={youngTwat}/>
+                            <img className="image-size" src={youngTwat} alt="" />
                             <figcaption>Young Twat</figcaption>
                         </figure> :
                             (refresh >= 60 && refresh < 70) ? 
                                 <figure className="w3-animate-left">
-                                    <img className="image-size" src={ghostTwat} />
+                                    <img className="image-size" src={ghostTwat} alt="" />
                                     <figcaption>Ghost Twat</figcaption>
                                 </figure> :
                                     (refresh >= 70 && refresh < 80) ? 
                                         <figure className="w3-animate-right">
-                                            <img className="image-size" src={fairyTwat} />
+                                            <img className="image-size" src={fairyTwat} alt="" />
                                             <figcaption>Fairy Twat</figcaption>
                                         </figure> :
                                             (refresh >= 80 && refresh < 90) ?
                                                 <figure className="w3-animate-top">
-                                                    <img className="image-size" src={balloonTwat} />
+                                                    <img className="image-size" src={balloonTwat} alt="" />
                                                     <figcaption>Balloon Twat</figcaption>
                                                 </figure> :
                                                     (refresh >= 90 && refresh < 100) ? 
                                                         <figure className="w3-animate-bottom">
-                                                            <img className="image-size" src={frenchTwat} />
+                                                            <img className="image-size" src={frenchTwat} alt="" />
                                                             <figcaption>French Twat</figcaption>
                                                         </figure> : 
                                                             (refresh >= 100 && refresh < 110) ? 
                                                                 <figure className="w3-animate-zoom">
-                                                                    <img className="image-size" src={siblingTwat} />
+                                                                    <img className="image-size" src={siblingTwat} alt="" />
                                                                     <figcaption>Sibling Twat</figcaption>
                                                                 </figure>  :
                                                                     props.setStage('page2')
