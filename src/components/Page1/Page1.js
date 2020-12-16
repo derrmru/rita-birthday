@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import methods from '../../functions/functions'
 import classic from '../../music/classic.mp3'
 import hb from '../../music/hb.mp3'
-import youngTwat from '../../images/young-twat.jpg'
-import ghostTwat from '../../images/ghost-twat.jpg'
-import fairyTwat from '../../images/fairy-twat.jpg'
+/*import youngTwat from '../../images/young-twat.jpg'*/
+/*import ghostTwat from '../../images/ghost-twat.jpg'*/
+/*import fairyTwat from '../../images/fairy-twat.jpg'*/
 import balloonTwat from '../../images/balloon-twat.jpg'
 import frenchTwat from '../../images/french-twat.jpg'
 import siblingTwat from '../../images/sibling-twat.jpg'
@@ -80,17 +80,17 @@ const Page1 = (props) => {
                     </> : 
                     (refresh >= 50 && refresh < 60) ?
                         <figure className="w3-animate-zoom" >
-                            <img className="image-size" src={youngTwat} alt="" />
+                            <img className="image-size" src={props.young} alt="" />
                             <figcaption>Young Twat</figcaption>
                         </figure> :
                             (refresh >= 60 && refresh < 70) ? 
                                 <figure className="w3-animate-left">
-                                    <img className="image-size" src={ghostTwat} alt="" />
+                                    <img className="image-size" src={props.ghost} alt="" />
                                     <figcaption>Ghost Twat</figcaption>
                                 </figure> :
                                     (refresh >= 70 && refresh < 80) ? 
                                         <figure className="w3-animate-right">
-                                            <img className="image-size" src={fairyTwat} alt="" />
+                                            <img className="image-size" src={props.fairy} alt="" />
                                             <figcaption>Fairy Twat</figcaption>
                                         </figure> :
                                             (refresh >= 80 && refresh < 90) ?
