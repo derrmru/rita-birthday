@@ -11,7 +11,7 @@ import siblingImg from './images/sibling-twat.jpg';
 import teddyImg from './images/teddy.jpg';
 import bagImg from './images/bag.jpg';
 import bag2Img from './images/bag2.jpeg';
-import cowImg from './images/cow.jpg';
+import cowImg from './images/cow.jpeg';
 import godImg from './images/god.jpeg';
 import heifImg from './images/heif.jpeg';
 import jellpeterImg from './images/jellpeter.jpg';
