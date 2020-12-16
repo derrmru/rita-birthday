@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import baby from '../../music/baby.mp3'
 import hit from '../../music/hit.mp3'
-import teddy from '../../images/teddy.jpg'
 import './Page2.css'
 
 const Page2 = (props) => {
@@ -54,7 +53,7 @@ const Page2 = (props) => {
               <source src={hit}></source>
             </audio>
             <div>
-                <img className="image-size w3-animate-opacity" src={teddy} alt="" />
+                <img className="image-size w3-animate-opacity" src={props.teddy} alt="" />
             </div>
             <div className="big-titles">
                 <h1>

@@ -8,20 +8,17 @@ import ghostImg from './images/ghost-twat.jpg';
 import balloonImg from './images/balloon-twat.jpg';
 import frenchImg from './images/french-twat.jpg';
 import siblingImg from './images/sibling-twat.jpg';
+import teddyImg from './images/teddy.jpg';
+import bagImg from './images/bag.jpg';
+import bag2Img from './images/bag2.jpg';
+import cowImg from './images/cow.jpg';
+import godImg from './images/god.jpeg';
+import heifImg from './images/heif.jpeg';
+import jellpeterImg from './images/jellpeter.jpg';
+import spreadImg from './images/spread.jpeg';
+import wrappedImg from './images/wrappedCat.jpeg';
 import methods from './functions/functions';
 import './App.css';
-
-/*const babyBg = new Image().src = './images/baby-background.jpg';
-const bag = new Image().src = './images/bag.jpg';
-const bag2 = new Image().src = './images/bag2.jpg';
-const cake = new Image().src = './images/cake.gif';
-const cow = new Image().src = './images/cow.jpg';
-const god = new Image().src = './images/god.jpeg';
-const heif = new Image().src = './images/heif.jpeg';
-const jellpeter = new Image().src = './images/jellpeter';
-const spread = new Image().src = './images/spread.jpeg';
-const teddy = new Image().src = './images/teddy.jpg';
-const wrapped = new Image().src = './images/wrappedCat.jpeg';*/
 
 function App() {
   const [stage, setStage] = useState('open');
@@ -29,6 +26,7 @@ function App() {
 
   useEffect(() => {
     //preload images and pass to components as props
+    //page1
     const young = new Image()
     young.src = youngImg;
 
@@ -46,6 +44,35 @@ function App() {
 
     const sibling = new Image()
     sibling.src = siblingImg
+
+    //page2
+    const teddy = new Image()
+    teddy.src = teddyImg
+
+    //page3
+    const bag = new Image()
+    bag.src = bagImg
+
+    const bag2 = new Image()
+    bag2.src = bag2Img
+
+    const cow = new Image()
+    cow.src = cowImg
+
+    const god = new Image()
+    god.src = godImg
+
+    const heif = new Image()
+    heif.src = heifImg
+    
+    const jp = new Image()
+    jp.src = jellpeterImg
+
+    const spread = new Image()
+    spread.src = spreadImg
+    
+    const wrapped = new Image()
+    wrapped.src = wrappedImg
 
     const interval = setInterval(() => {
       setBgColor(methods.getRandomColor)
@@ -88,8 +115,21 @@ function App() {
                 sibling={siblingImg}
                 /> :
                 stage === 'page2' ? 
-                  <Page2 setStage={setStage} /> :
-                    stage === 'page3' && <Page3 setStage={setStage} />
+                  <Page2 
+                    setStage={setStage} 
+                    teddy={teddyImg}
+                    /> :
+                    stage === 'page3' && <Page3 
+                                          setStage={setStage}
+                                          bag={bagImg}
+                                          bag2={bag2Img}
+                                          cow={cowImg}
+                                          god={godImg}
+                                          heif={heifImg}
+                                          jp={jellpeterImg}
+                                          spread={spreadImg}
+                                          wrapped={wrappedImg}
+                                          />
       }
     </div>
   );

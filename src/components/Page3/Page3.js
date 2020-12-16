@@ -35,14 +35,14 @@ const Page3 = (props) => {
             <audio id="final">
               <source src={final}></source>
             </audio>
-            {(refresh >= 20 && refresh <= 100) && <img className="image-size backed w3-animate-left" src={jellpeter} alt="" />}
-            {(refresh >= 30 && refresh <= 100) && <img className="image-size backed2 w3-animate-opacity" src={bag} alt="" />}
-            {(refresh >= 40 && refresh <= 100) && <img className="image-size backed3 w3-animate-bottom" src={god} alt="" />}
-            {(refresh >= 50 && refresh <= 100) && <img className="image-size backed4 w3-animate-opacity" src={heif} alt="" />}
-            {(refresh >= 60 && refresh <= 100) && <img className="image-size backed5 w3-animate-top" src={bag2} alt="" />}
-            {(refresh >= 70 && refresh <= 100) && <img className="image-size backed6 w3-animate-left" src={spread} alt="" />}
-            {(refresh >= 80 && refresh <= 100) && <img className="image-size backed7 w3-animate-right" src={cow} alt="" />}
-            {(refresh >= 90 && refresh <= 100) && <img className="image-size backed8 w3-animate-opacity" src={wrappedCat} alt="" />}
+            {(refresh >= 20 && refresh <= 100) && <img className="image-size backed w3-animate-left" src={props.jp} alt="" />}
+            {(refresh >= 30 && refresh <= 100) && <img className="image-size backed2 w3-animate-opacity" src={props.bag} alt="" />}
+            {(refresh >= 40 && refresh <= 100) && <img className="image-size backed3 w3-animate-bottom" src={props.god} alt="" />}
+            {(refresh >= 50 && refresh <= 100) && <img className="image-size backed4 w3-animate-opacity" src={props.heif} alt="" />}
+            {(refresh >= 60 && refresh <= 100) && <img className="image-size backed5 w3-animate-top" src={props.bag2} alt="" />}
+            {(refresh >= 70 && refresh <= 100) && <img className="image-size backed6 w3-animate-left" src={props.spread} alt="" />}
+            {(refresh >= 80 && refresh <= 100) && <img className="image-size backed7 w3-animate-right" src={props.cow} alt="" />}
+            {(refresh >= 90 && refresh <= 100) && <img className="image-size backed8 w3-animate-opacity" src={props.wrapped} alt="" />}
             <div className="texted">
                 {
                     refresh >= 5 && <h1 className="big-red">Also...</h1>
