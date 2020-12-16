@@ -1,13 +1,5 @@
 import { useEffect, useState } from 'react'
 import final from '../../music/jphb.m4a'
-import bag from '../../images/bag.jpg'
-import jellpeter from '../../images/jellpeter.jpg'
-import god from '../../images/god.jpeg'
-import heif from '../../images/heif.jpeg'
-import bag2 from '../../images/bag2.jpeg'
-import spread from '../../images/spread.jpeg'
-import cow from '../../images/cow.jpeg'
-import wrappedCat from '../../images/wrappedCat.jpeg'
 import './Page3.css'
 
 const Page3 = (props) => {
