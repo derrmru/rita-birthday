@@ -8,56 +8,56 @@
 }
 
 .backed {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 20px;
     z-index: 100;
 }
 
 .backed2 {
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 40px;
     z-index: 110;
 }
 
 .backed3 {
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     right: 10%;
     z-index: 120;
 }
 
 .backed4 {
-    position: absolute;
+    position: fixed;
     bottom: 20%;
     right: 30%;
     z-index: 130;
 }
 
 .backed5 {
-    position: absolute;
+    position: fixed;
     top: 20%;
     left: 30%;
     z-index: 140;
 }
 
 .backed6 {
-    position: absolute;
+    position: fixed;
     top: 10%;
     right: 30%;
     z-index: 150;
 }
 
 .backed7 {
-    position: absolute;
+    position: fixed;
     bottom: 5%;
     left: 20%;
     z-index: 160;
 }
 
 .backed8 {
-    position: absolute;
+    position: fixed;
     top: 5%;
     left: 10%;
     z-index: 170;
