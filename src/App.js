@@ -4,19 +4,14 @@ import Page2 from './components/Page2/Page2';
 import Page3 from './components/Page3/Page3';
 import youngImg from './images/young-twat.jpg';
 import fairyImg from './images/fairy-twat.jpg';
-import ghostImg from './images/ghost-twat.jpg'
+import ghostImg from './images/ghost-twat.jpg';
+import balloonImg from './images/balloon-twat.jpg';
+import frenchImg from './images/french-twat.jpg';
+import siblingImg from './images/sibling-twat.jpg';
 import methods from './functions/functions';
 import './App.css';
 
-//page 1
-/*const balloon = new Image().src = './images/balloon-twat.jpg';
-const fairy = new Image().src = './images/fairy-twat.jpg';
-const french = new Image().src = './images/french-twat.jpg';
-const ghost = new Image().src = './images/ghost-twat.jpg';
-const sibling = new Image().src = './images/sibling-twat';
-const young = new Image().src = './images/young-twat';
-
-const babyBg = new Image().src = './images/baby-background.jpg';
+/*const babyBg = new Image().src = './images/baby-background.jpg';
 const bag = new Image().src = './images/bag.jpg';
 const bag2 = new Image().src = './images/bag2.jpg';
 const cake = new Image().src = './images/cake.gif';
@@ -33,7 +28,7 @@ function App() {
   const [bgColor, setBgColor] = useState('#ffffff');
 
   useEffect(() => {
-
+    //preload images and pass to components as props
     const young = new Image()
     young.src = youngImg;
 
@@ -42,6 +37,15 @@ function App() {
 
     const ghost = new Image()
     ghost.src = ghostImg;
+
+    const balloon = new Image()
+    balloon.src = balloonImg
+
+    const french = new Image()
+    french.src = frenchImg
+
+    const sibling = new Image()
+    sibling.src = siblingImg
 
     const interval = setInterval(() => {
       setBgColor(methods.getRandomColor)
@@ -74,7 +78,15 @@ function App() {
               <p>(You'll need sound)</p>
           </div> :
             stage === 'page1' ?
-              <Page1 setStage={setStage} young={youngImg} ghost={ghostImg} fairy={fairyImg} /> :
+              <Page1 
+                setStage={setStage} 
+                young={youngImg}
+                ghost={ghostImg}
+                fairy={fairyImg} 
+                balloon={balloonImg}
+                french={frenchImg}
+                sibling={siblingImg}
+                /> :
                 stage === 'page2' ? 
                   <Page2 setStage={setStage} /> :
                     stage === 'page3' && <Page3 setStage={setStage} />

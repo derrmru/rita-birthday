@@ -2,12 +2,6 @@ import { useEffect, useState } from 'react'
 import methods from '../../functions/functions'
 import classic from '../../music/classic.mp3'
 import hb from '../../music/hb.mp3'
-/*import youngTwat from '../../images/young-twat.jpg'*/
-/*import ghostTwat from '../../images/ghost-twat.jpg'*/
-/*import fairyTwat from '../../images/fairy-twat.jpg'*/
-import balloonTwat from '../../images/balloon-twat.jpg'
-import frenchTwat from '../../images/french-twat.jpg'
-import siblingTwat from '../../images/sibling-twat.jpg'
 import './Page1.css'
 
 const Page1 = (props) => {
@@ -95,17 +89,17 @@ const Page1 = (props) => {
                                         </figure> :
                                             (refresh >= 80 && refresh < 90) ?
                                                 <figure className="w3-animate-top">
-                                                    <img className="image-size" src={balloonTwat} alt="" />
+                                                    <img className="image-size" src={props.balloon} alt="" />
                                                     <figcaption>Balloon Twat</figcaption>
                                                 </figure> :
                                                     (refresh >= 90 && refresh < 100) ? 
                                                         <figure className="w3-animate-bottom">
-                                                            <img className="image-size" src={frenchTwat} alt="" />
+                                                            <img className="image-size" src={props.french} alt="" />
                                                             <figcaption>French Twat</figcaption>
                                                         </figure> : 
                                                             (refresh >= 100 && refresh < 110) ? 
                                                                 <figure className="w3-animate-zoom">
-                                                                    <img className="image-size" src={siblingTwat} alt="" />
+                                                                    <img className="image-size" src={props.sibling} alt="" />
                                                                     <figcaption>Sibling Twat</figcaption>
                                                                 </figure>  :
                                                                     props.setStage('page2')
