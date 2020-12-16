@@ -1,0 +1,80 @@
+.page3-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;  
+    background-image: url('../../images/cake.gif');
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.backed {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.backed2 {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    z-index: 110;
+}
+
+.backed3 {
+    position: absolute;
+    bottom: 30px;
+    right: 10%;
+    z-index: 120;
+}
+
+.backed4 {
+    position: absolute;
+    bottom: 20%;
+    right: 30%;
+    z-index: 130;
+}
+
+.backed5 {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 140;
+}
+
+.backed6 {
+    position: absolute;
+    top: 10%;
+    right: 30%;
+    z-index: 150;
+}
+
+.backed7 {
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+    z-index: 160;
+}
+
+.backed8 {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    z-index: 170;
+}
+
+.texted {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.big-red {
+    font-size: 10vw;
+    color: red;
+}

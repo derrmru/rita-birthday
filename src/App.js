@@ -1,23 +1,52 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
+import Page1 from './components/Page1/Page1';
+import Page2 from './components/Page2/Page2';
+import Page3 from './components/Page3/Page3';
+import methods from './functions/functions';
 import './App.css';
 
 function App() {
+  const [stage, setStage] = useState('open');
+  const [bgColor, setBgColor] = useState('#ffffff');
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+      setBgColor(methods.getRandomColor)
+    }, 1000)
+
+    return () => {
+      clearInterval(interval)
+    }
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        stage === 'open' ?
+          <div className="open-div" style={{backgroundColor: bgColor}}>
+            <h1 
+              className='w3-animate-zoom'
+              style={{
+                fontFamily: 'Russo One'
+              }}
+              >
+                It's your Birthday RITA!!!
+              </h1> 
+            <button
+              className='start-button w3-animate-zoom'
+              onClick={() => setStage('page1')}
+              >
+                Click me if you dare
+              </button>
+              <p>(You'll need sound)</p>
+          </div> :
+            stage === 'page1' ?
+              <Page1 setStage={setStage} /> :
+                stage === 'page2' ? 
+                  <Page2 setStage={setStage} /> :
+                    stage === 'page3' && <Page3 setStage={setStage} />
+      }
     </div>
   );
 }
