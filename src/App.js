@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Page1 from './components/Page1/Page1';
 import Page2 from './components/Page2/Page2';
 import Page3 from './components/Page3/Page3';
+import Loading from './components/Loading/Loading';
 import youngImg from './images/young-twat.jpg';
 import fairyImg from './images/fairy-twat.jpg';
 import ghostImg from './images/ghost-twat.jpg';
@@ -21,6 +22,7 @@ import methods from './functions/functions';
 import './App.css';
 
 function App() {
+  const [load, setLoad] = useState(0);
   const [stage, setStage] = useState('open');
   const [bgColor, setBgColor] = useState('#ffffff');
 
@@ -29,50 +31,65 @@ function App() {
     //page1
     const young = new Image()
     young.src = youngImg;
+    young.onload = setLoad(load + 6.7);
 
     const fairy = new Image()
     fairy.src = fairyImg;
+    fairy.onload = setLoad(load + 6.7);
 
     const ghost = new Image()
     ghost.src = ghostImg;
+    ghost.onload = setLoad(load + 6.7);
 
     const balloon = new Image()
     balloon.src = balloonImg
+    balloon.onload = setLoad(load + 6.7);
 
     const french = new Image()
     french.src = frenchImg
+    french.onload = setLoad(load + 6.7);
 
     const sibling = new Image()
     sibling.src = siblingImg
+    sibling.onload = setLoad(load + 6.7);
 
     //page2
     const teddy = new Image()
     teddy.src = teddyImg
+    teddy.onload = setLoad(load + 6.7);
 
     //page3
     const bag = new Image()
     bag.src = bagImg
+    bag.onload = setLoad(load + 6.7);
 
     const bag2 = new Image()
     bag2.src = bag2Img
+    bag2.onload = setLoad(load + 6.7);
 
     const cow = new Image()
     cow.src = cowImg
+    cow.onload = setLoad(load + 6.7);
 
     const god = new Image()
     god.src = godImg
+    god.onload = setLoad(load + 6.7);
 
     const heif = new Image()
     heif.src = heifImg
+    heif.onload = setLoad(load + 6.7);
     
     const jp = new Image()
     jp.src = jellpeterImg
+    jp.onload = setLoad(load + 6.7);
 
     const spread = new Image()
     spread.src = spreadImg
+    spread.onload = setLoad(load + 6.7);
     
     const wrapped = new Image()
     wrapped.src = wrappedImg
+    wrapped.onload = setLoad(load + 6.7);
 
     const interval = setInterval(() => {
       setBgColor(methods.getRandomColor)
@@ -85,6 +102,9 @@ function App() {
 
   return (
     <div className="App">
+      {
+        load < 100 && <Loading load={load} />
+      }
       {
         stage === 'open' ?
           <div className="open-div" style={{backgroundColor: bgColor}}>
