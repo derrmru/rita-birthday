@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Page1 from './components/Page1/Page1';
 import Page2 from './components/Page2/Page2';
 import Page3 from './components/Page3/Page3';
@@ -25,9 +25,10 @@ import babyA from './music/baby.mp3';
 import finalA from './music/jphb.m4a';
 import './App.css';
 
+const loadInt = 100 / 20;
+
 function App() {
-  let loadInt = 100 / 19;
-  const [load, setLoad] = useState(0);
+  const load = useRef(0);
   const [stage, setStage] = useState('open');
   const [bgColor, setBgColor] = useState('#ffffff');
 
@@ -36,81 +37,81 @@ function App() {
     //page1
     const young = new Image()
     young.src = youngImg;
-    young.onload = setLoad(load + loadInt);
+    young.onload = load.current += loadInt;
 
     const fairy = new Image()
     fairy.src = fairyImg;
-    fairy.onload = setLoad(load + loadInt);
+    fairy.onload = load.current += loadInt;
 
     const ghost = new Image()
     ghost.src = ghostImg;
-    ghost.onload = setLoad(load + loadInt);
+    ghost.onload = load.current += loadInt;
 
     const balloon = new Image()
     balloon.src = balloonImg
-    balloon.onload = setLoad(load + loadInt);
+    balloon.onload = load.current += loadInt;
 
     const french = new Image()
     french.src = frenchImg
-    french.onload = setLoad(load + loadInt);
+    french.onload = load.current += loadInt;
 
     const sibling = new Image()
     sibling.src = siblingImg
-    sibling.onload = setLoad(load + loadInt);
+    sibling.onload = load.current += loadInt;
 
     const classic = new Audio()
     Audio.src = classicA
-    classic.oncanplaythrough = setLoad(load + loadInt)
+    classic.oncanplaythrough = load.current += loadInt;
 
     const hb = new Audio()
     Audio.src = hbA
-    hb.oncanplaythrough = setLoad(load + loadInt)
+    hb.oncanplaythrough = load.current += loadInt;
 
     //page2
     const teddy = new Image()
     teddy.src = teddyImg
-    teddy.onload = setLoad(load + loadInt);
+    teddy.onload = load.current += loadInt;
 
     const baby = new Audio()
     Audio.src = babyA
-    baby.oncanplaythrough = setLoad(load + loadInt)
+    baby.oncanplaythrough = load.current += loadInt;
 
     //page3
     const bag = new Image()
     bag.src = bagImg
-    bag.onload = setLoad(load + loadInt);
+    bag.onload = load.current += loadInt;
 
     const bag2 = new Image()
     bag2.src = bag2Img
-    bag2.onload = setLoad(load + loadInt);
+    bag2.onload = load.current += loadInt;
 
     const cow = new Image()
     cow.src = cowImg
-    cow.onload = setLoad(load + loadInt);
+    cow.onload = load.current += loadInt;
 
     const god = new Image()
     god.src = godImg
-    god.onload = setLoad(load + loadInt);
+    god.onload = load.current += loadInt;
 
     const heif = new Image()
     heif.src = heifImg
-    heif.onload = setLoad(load + loadInt);
+    heif.onload = load.current += loadInt;
     
     const jp = new Image()
     jp.src = jellpeterImg
-    jp.onload = setLoad(load + loadInt);
+    jp.onload = load.current += loadInt;
 
     const spread = new Image()
     spread.src = spreadImg
-    spread.onload = setLoad(load + loadInt);
+    spread.onload = load.current += loadInt;
     
     const wrapped = new Image()
     wrapped.src = wrappedImg
-    wrapped.onload = setLoad(load + loadInt);
+    wrapped.onload = load.current += loadInt;
 
     const final = new Audio()
     Audio.src = finalA
-    final.oncanplaythrough = setLoad(load + loadInt)
+    final.oncanplaythrough = load.current += loadInt;
 
     const interval = setInterval(() => {
       setBgColor(methods.getRandomColor)
@@ -119,15 +120,15 @@ function App() {
     return () => {
       clearInterval(interval)
     }
-  }, [load, loadInt])
+  }, [load, bgColor])
 
   return (
     <div className="App">
       {
-        load < 100 && <Loading load={load} />
+        load.current < 100 && <Loading load={load.current} />
       }
       {
-        (stage === 'open' && load >= 100) ?
+        (stage === 'open' && load.current >= 100) ?
           <div className="open-div" style={{backgroundColor: bgColor}}>
             <h1 
               className='w3-animate-zoom'

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import hit from '../../music/hit.mp3'
+import hit from '../../music/hit.mp3';
 import './Page2.css'
 
 const Page2 = (props) => {
@@ -13,7 +13,6 @@ const Page2 = (props) => {
         }
 
         let hit = document.getElementById('hit')
-        if (hit) {
             if (refresh === 10) {
                 hit.currentTime = 0;
                 hit.play()
@@ -28,7 +27,6 @@ const Page2 = (props) => {
             } else if (refresh === 40) {
                 hit.pause()
             } 
-        }
 
         if (refresh === 40) {
             props.setStage('page3')
@@ -41,7 +39,7 @@ const Page2 = (props) => {
           return () => {
             clearInterval(interval)
           }
-    })
+    }, [refresh, props])
 
     return (
         <div className="page2-container">

@@ -19,6 +19,8 @@ const Page1 = (props) => {
             audio.volume = 0.8
         }
 
+        refresh >= 110 && props.setStage('page2')
+
         const letters = ', and...'
         const interval = setInterval(() => {
           setRefresh(refresh + 1)
@@ -29,7 +31,7 @@ const Page1 = (props) => {
         return () => {
           clearInterval(interval)
         }
-      }, [refresh, and])
+      }, [refresh, bgColor, and, props])
 
     return (
         <div 
@@ -100,7 +102,7 @@ const Page1 = (props) => {
                                                                     <img className="image-size" src={props.sibling} alt="" />
                                                                     <figcaption>Sibling Twat</figcaption>
                                                                 </figure>  :
-                                                                    props.setStage('page2')
+                                                                    <></>
             }
         </div>
     )
