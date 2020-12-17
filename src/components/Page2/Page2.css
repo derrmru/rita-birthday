@@ -35,6 +35,10 @@
     margin: auto;
 }
 
+.start-button {
+    padding: 20px;
+}
+
 @media only screen and (max-width: 450px) {
     .image-size {
         width: 250px;

@@ -59,9 +59,9 @@ const Page2 = (props) => {
                                                 <button
                                                     className="start-button"
                                                     onClick={() => change()}
-                                                    style={{width: '30%', fontSize: '20px'}}
+                                                    style={{fontSize: '20px'}}
                                                     >
-                                                    Oh god is there more!?
+                                                    Oh god is there more!?<br />
                                                     Click me to find out!
                                                 </button>
                     }
