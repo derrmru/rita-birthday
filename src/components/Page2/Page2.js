@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import hit from '../../music/hit.mp3';
 import './Page2.css'
 
 const Page2 = (props) => {
@@ -42,7 +41,7 @@ const Page2 = (props) => {
               <source src={props.baby}></source>
             </audio>
             <audio id="hit">
-              <source src={hit}></source>
+              <source src={props.hit}></source>
             </audio>
             <div>
                 <img className="image-size w3-animate-opacity" src={props.teddy} alt="" />

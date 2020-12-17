@@ -22,6 +22,7 @@ import methods from './functions/functions';
 import classicA from './music/classic.mp3';
 import hbA from './music/hb.mp3';
 import babyA from './music/baby.mp3';
+import hitA from './music/hit.mp3';
 import finalA from './music/jphb.mp3';
 import './App.css';
 
@@ -75,6 +76,10 @@ function App() {
     const baby = new Audio()
     Audio.src = babyA
     baby.oncanplaythrough = load.current += loadInt;
+
+    const hit = new Audio()
+    Audio.src = hitA
+    hit.oncanplaythrough = load.current += loadInt;
 
     //page3
     const bag = new Image()
@@ -163,6 +168,7 @@ function App() {
                     setStage={setStage} 
                     teddy={teddyImg}
                     baby={babyA}
+                    hit={hitA}
                     /> :
                     stage === 'page3' && <Page3 
                                           setStage={setStage}
