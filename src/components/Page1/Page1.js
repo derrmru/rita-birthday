@@ -7,6 +7,10 @@ const Page1 = (props) => {
     const [bgColor, setBgColor] = useState('#ffffff');
     const [and, setAnd] = useState('');
 
+    const change = () => {
+        props.setStage('page2')
+    }
+
     useEffect(() => {
         let classical = document.getElementById('classic')
         if (classical && refresh >= 39) { classical.pause() } else {
@@ -18,8 +22,6 @@ const Page1 = (props) => {
             audio.play()
             audio.volume = 0.8
         }
-
-        refresh >= 110 && props.setStage('page2')
 
         const letters = ', and...'
         const interval = setInterval(() => {
@@ -102,7 +104,12 @@ const Page1 = (props) => {
                                                                     <img className="image-size" src={props.sibling} alt="" />
                                                                     <figcaption>Sibling Twat</figcaption>
                                                                 </figure>  :
-                                                                    <></>
+                                                                    <button
+                                                                        className="start-button"
+                                                                        onClick={() => change()}
+                                                                        >
+                                                                        Click me if you dare to see more!
+                                                                    </button>
             }
         </div>
     )
