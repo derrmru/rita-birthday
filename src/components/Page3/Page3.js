@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import final from '../../music/jphb.m4a'
 import './Page3.css'
 
 const Page3 = (props) => {
@@ -25,7 +24,7 @@ const Page3 = (props) => {
     return (
         <div className="page3-container">
             <audio id="final">
-              <source src={final}></source>
+              <source src={props.final}></source>
             </audio>
             {(refresh >= 20 && refresh <= 100) && <img className="image-size backed w3-animate-left" src={props.jp} alt="" />}
             {(refresh >= 30 && refresh <= 100) && <img className="image-size backed2 w3-animate-opacity" src={props.bag} alt="" />}

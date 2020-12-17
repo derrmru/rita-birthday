@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
 import methods from '../../functions/functions'
-import classic from '../../music/classic.mp3'
-import hb from '../../music/hb.mp3'
 import './Page1.css'
 
 const Page1 = (props) => {
@@ -38,10 +36,10 @@ const Page1 = (props) => {
             className="page1-container"
             style={{backgroundColor: bgColor, fontFamily: 'Russo One'}}>
             <audio id="classic">
-              <source src={classic}></source>
+              <source src={props.classic}></source>
             </audio>
             <audio id="audio">
-              <source src={hb}></source>
+              <source src={props.hb}></source>
             </audio>
             {
                 refresh <= 50 ? 

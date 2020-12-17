@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import baby from '../../music/baby.mp3'
 import hit from '../../music/hit.mp3'
 import './Page2.css'
 
@@ -47,7 +46,7 @@ const Page2 = (props) => {
     return (
         <div className="page2-container">
             <audio id="baby">
-              <source src={baby}></source>
+              <source src={props.baby}></source>
             </audio>
             <audio id="hit">
               <source src={hit}></source>
