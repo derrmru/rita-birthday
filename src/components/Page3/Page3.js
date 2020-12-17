@@ -36,10 +36,13 @@ const Page3 = (props) => {
             {(refresh >= 90 && refresh <= 100) && <img className="image-size backed8 w3-animate-opacity" src={props.wrapped} alt="" />}
             <div className="texted">
                 {
-                    refresh >= 5 && <h1 className="big-red">Also...</h1>
+                    (refresh >= 5 && refresh < 100) && <h1 className="big-red">Also...</h1>
                 }
                 {
-                    refresh >= 10 && <h2 className="big-red">It's your BIRTHDAY!!!!</h2>
+                    (refresh >= 10 && refresh < 100) && <h2 className="big-red">It's your BIRTHDAY!!!!</h2>
+                }
+                {
+                    refresh >= 100 && <h1 className="big-red">The End</h1>
                 }
             </div>
         </div>

@@ -4,6 +4,10 @@ import './Page2.css'
 const Page2 = (props) => {
     const [refresh, setRefresh] = useState(0);
 
+    const change = () => {
+        props.setStage('page3')
+    }
+
     useEffect(() => {
         let baby = document.getElementById('baby')
         if (baby) {
@@ -21,10 +25,6 @@ const Page2 = (props) => {
             } else if (refresh === 40) {
                 hit.pause()
             }
-
-        if (refresh === 40) {
-            props.setStage('page3')
-        }
 
         const interval = setInterval(() => {
             setRefresh(refresh + 1)
@@ -53,8 +53,17 @@ const Page2 = (props) => {
                             'Teddy.' :
                             (refresh >= 15 && refresh < 20) ?
                                     'Teddy. Is.' :
-                                        refresh >= 20 &&
-                                            'Teddy. Is. Cute.'
+                                        (refresh >= 20 && refresh < 30) ?
+                                            'Teddy. Is. Cute.' :
+                                                refresh >= 30 &&
+                                                <button
+                                                    className="start-button"
+                                                    onClick={() => change()}
+                                                    style={{width: '30%', fontSize: '20px'}}
+                                                    >
+                                                    Oh god is there more!?
+                                                    Click me to find out!
+                                                </button>
                     }
                 </h1>
             </div>
