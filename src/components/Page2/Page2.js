@@ -11,7 +11,7 @@ const Page2 = (props) => {
             baby.volume = 1;
         }
 
-        let hit = document.getElementById('hit')
+        /*let hit = document.getElementById('hit')
             if (refresh === 10) {
                 hit.play()
             } else if (refresh === 15) {
@@ -20,7 +20,7 @@ const Page2 = (props) => {
                 hit.currentTime = 0;
             } else if (refresh === 40) {
                 hit.pause()
-            } 
+            } */
 
         if (refresh === 40) {
             props.setStage('page3')
@@ -40,9 +40,9 @@ const Page2 = (props) => {
             <audio id="baby">
               <source src={props.baby}></source>
             </audio>
-            <audio id="hit">
+            {/*<audio id="hit">
               <source src={props.hit}></source>
-            </audio>
+            </audio>*/}
             <div>
                 <img className="image-size w3-animate-opacity" src={props.teddy} alt="" />
             </div>
