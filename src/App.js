@@ -119,7 +119,7 @@ function App() {
     return () => {
       clearInterval(interval)
     }
-  }, [load])
+  }, [load, loadInt])
 
   return (
     <div className="App">
