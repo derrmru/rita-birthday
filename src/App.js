@@ -22,7 +22,7 @@ import methods from './functions/functions';
 import classicA from './music/classic.mp3';
 import hbA from './music/hb.mp3';
 import babyA from './music/baby.mp3';
-import finalA from './music/jphb.m4a';
+import finalA from './music/jphb.mp3';
 import './App.css';
 
 const loadInt = 100 / 20;

@@ -14,16 +14,11 @@ const Page2 = (props) => {
 
         let hit = document.getElementById('hit')
             if (refresh === 10) {
-                hit.currentTime = 0;
                 hit.play()
             } else if (refresh === 15) {
-                hit.pause()
-                hit.currentTime = 0;
-                hit.play()
-            } else if (refresh === 19) {
                 hit.currentTime = 0;
             } else if (refresh === 20) {
-                hit.play()
+                hit.currentTime = 0;
             } else if (refresh === 40) {
                 hit.pause()
             } 
