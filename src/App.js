@@ -106,7 +106,7 @@ function App() {
         load < 100 && <Loading load={load} />
       }
       {
-        stage === 'open' ?
+        (stage === 'open' && load >= 100) ?
           <div className="open-div" style={{backgroundColor: bgColor}}>
             <h1 
               className='w3-animate-zoom'
